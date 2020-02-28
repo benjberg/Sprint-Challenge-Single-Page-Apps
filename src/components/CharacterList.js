@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import CharacterCard from "./CharacterCard";
+import styled from 'styled-components';
 
+
+const Sbar=styled.div`
+display:flex;
+justify-content: center;
+
+`
 export default function CharacterList() {
   const [data, setData]=useState([]);
 const [query, setQuery]=useState('');
@@ -21,6 +28,7 @@ const [query, setQuery]=useState('');
   };
   return (
 <div className="characters">
+      <Sbar>
       <form className="search">
         <input
           type="text"
@@ -33,7 +41,7 @@ const [query, setQuery]=useState('');
           autoComplete="off"
         />
       </form>
-      
+      </Sbar>
   
     <div className="character">
      { data.map(data => {

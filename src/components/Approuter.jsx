@@ -24,7 +24,7 @@ function AppRouter() {
         <WelcomePage/>
         <Header/>
         <Switch>
-          {/* <Route path="/location" component={LocationList} /> */}
+          <Route path="/location" component={LocationList} />
           <Route path="/character" component={CharacterList} />
         </Switch>
       </div>
